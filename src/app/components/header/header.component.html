@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button (click)="location.back()" mat-icon-button>
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-button routerLink="/">Home</button>
+    <button mat-button routerLink="/pages/company">Company</button>
+    <span class="spacer"></span>
+    <button (click)="onToggleTheme()" mat-icon-button>
+      <mat-icon>format_color_fill</mat-icon>
+    </button>
+    <button mat-button routerLink="/pages/auth">
+      Sign In
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

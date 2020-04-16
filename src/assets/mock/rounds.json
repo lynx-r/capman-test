@@ -1,0 +1,30 @@
+﻿[
+  {
+    "Name": "1.Founders",
+    "Details of the round": "",
+    "Date of round": "1/10/2018",
+    "Cap Table log": "1,2",
+    "Number of shares per round": 1500,
+    "Pre Money": "$1",
+    "Investment": "$15,000",
+    "Post Money": "$15,001.00",
+    "Shares Outstanding": 1,
+    "Price per Share": "$1.00",
+    "New Shares Issued": 1500,
+    "PSOs granted": 0
+  },
+  {
+    "Name": "2.Seed",
+    "Details of the round": "Details of the round",
+    "Date of round": "1/4/2019",
+    "Cap Table log": "3,4,39",
+    "Number of shares per round": 3803,
+    "Pre Money": "$2,500,000",
+    "Investment": "$505,000",
+    "Post Money": "$3,005,000.00",
+    "Shares Outstanding": 1500,
+    "Price per Share": "$1,666.67",
+    "New Shares Issued": 3803,
+    "PSOs granted": 234
+  }
+]

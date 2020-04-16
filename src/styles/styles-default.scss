@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.company-details {
+
+  overflow: auto;
+
+  table {
+
+    width: 100%;
+
+    td, th {
+      padding-right: 20px;
+    }
+  }
+}
+
+.w100 {
+  width: 100%;
+}
+

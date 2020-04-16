@@ -1,0 +1,17 @@
+<mat-tab-group (selectedIndexChange)="onTabChange($event)" [selectedIndex]="tabIndex">
+  <mat-tab label="Cap table log">
+    <ng-template matTabContent>
+      <app-cap-table-log></app-cap-table-log>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Rounds">
+    <ng-template matTabContent>
+      <app-default-table type="rounds"></app-default-table>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Shareholders">
+    <ng-template matTabContent>
+      <app-default-table type="shareholder"></app-default-table>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

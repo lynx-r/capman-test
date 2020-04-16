@@ -1,0 +1,60 @@
+<mat-card fxFlex="40" fxFlexOffset="30">
+  <mat-card-header>
+    <mat-card-title>Add Transaction</mat-card-title>
+    <mat-card-subtitle>Add Transaction</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <form #transactionForm="ngForm" (ngSubmit)="onSubmit(transactionForm)" fxLayout="column">
+      <mat-form-field>
+        <input #transactionName="ngModel"
+               [(ngModel)]="transaction.Name"
+               [maxlength]="30"
+               [minlength]="3"
+               matInput
+               name="name"
+               placeholder="Transaction Name"
+               required
+               type="text"
+        >
+        <mat-error *ngIf="!!transactionName.errors">
+          <div *ngIf="!!transactionName.errors.required">
+            Required
+          </div>
+          <div *ngIf="!!transactionName.errors.minlength">
+            Min length {{transactionName.errors.minlength.requiredLength}}
+          </div>
+          <div *ngIf="!!transactionName.errors.maxlength">
+            Max length {{transactionName.errors.maxlength.requiredLength}}
+          </div>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input #sharesIssued="ngModel"
+               [(ngModel)]="transaction['Shares issued']"
+               [min]="0"
+               appCustomMax="100000"
+               appCustomMin="10"
+               matInput
+               name="sharesIssued"
+               placeholder="Shares Issued"
+               required
+               type="number"
+        >
+        <mat-error *ngIf="!!sharesIssued.errors">
+          <div *ngIf="!!sharesIssued.errors.required">
+            Required
+          </div>
+          <div *ngIf="!!sharesIssued.errors.appCustomMin">
+            Min {{sharesIssued.errors.appCustomMin.requiredMin}}
+          </div>
+          <div *ngIf="!!sharesIssued.errors.appCustomMax">
+            Max {{sharesIssued.errors.appCustomMax.requiredMax}}
+          </div>
+        </mat-error>
+      </mat-form-field>
+      <button [disabled]="!transactionForm.valid" mat-button>
+        Add
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
